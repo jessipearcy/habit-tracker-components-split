@@ -10,7 +10,7 @@ import { Habit } from './models/habit';
 export class AppComponent implements OnInit {
   habits: Habit[] = [
     <Habit>{
-      name: 'Example: Do the dishes',
+      name: '15 Minute Walk',
       frequency: 'Daily',
       description:
         'This habit makes my kitchen look nice and makes my day better the next morning.',
