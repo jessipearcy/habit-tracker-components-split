@@ -8,12 +8,18 @@ import { Habit } from './models/habit';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  habits: Habit[] = [
-    <Habit>{
+  public habits: Habit[] = [
+    {
       name: '15 Minute Walk',
       frequency: 'Daily',
       description:
         'This habit makes my kitchen look nice and makes my day better the next morning.',
+    },
+    {
+      name: 'Weed the Garden',
+      frequency: 'Weekly',
+      description:
+        'The weeds get so out of hand if they wait any longer, and I like how nice our home looks with a clean lawn.',
     },
   ];
   habitForm = new FormGroup({
@@ -37,7 +43,6 @@ export class AppComponent implements OnInit {
       this.habits.push(this.habitForm.value as Habit);
     }
     this.exitForm();
-    console.log(this.habitForm.value);
   }
 
   public setEditForm(habit: Habit, index: number) {

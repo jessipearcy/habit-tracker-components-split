@@ -44,6 +44,10 @@
   margin: auto;
 }
 
+button:hover, .detail-options {
+    cursor: pointer;
+}
+
 .add-form-container mat-card-title {
     margin: 1em !important;
 }
@@ -70,10 +74,4 @@ button {
     margin-bottom: 1em;
 }
 
-button:hover, .detail-options {
-    cursor: pointer;
-}
 
-@media only screen and (max-width: 600px) {
-
-}

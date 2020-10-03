@@ -12,7 +12,7 @@
   <button mat-raised-button color="accent" (click)="adding = !adding">
     Add New Habit
   </button>
-  <div *ngFor="let habit of habits; let i = index;">
+  <div *ngFor="let habit of habits; let i = index">
     <mat-card>
       <mat-card-title>
         <mat-icon
@@ -25,9 +25,16 @@
         {{ habit.name }}
       </mat-card-title>
       <div class="detail-options">
-      <mat-icon class="habit-icon" color="primary" (click)="setEditForm(habit, i)">edit</mat-icon>
-      <mat-icon class="habit-icon" color="warn" (click)="onDelete(i)">remove_circle</mat-icon>
-    </div>
+        <mat-icon
+          class="habit-icon"
+          color="primary"
+          (click)="setEditForm(habit, i)"
+          >edit</mat-icon
+        >
+        <mat-icon class="habit-icon" color="warn" (click)="onDelete(i)"
+          >remove_circle</mat-icon
+        >
+      </div>
       <mat-card-content>
         <p>
           <span class="detail-label">Frequency:</span> {{ habit.frequency }}
@@ -43,7 +50,7 @@
 
 <div class="add-form-container" *ngIf="adding || editing">
   <mat-card>
-    <mat-card-title> <span *ngIf="adding">Adding New</span><span *ngIf="editing">Edit</span> Habit </mat-card-title>
+    <mat-card-title> {{ adding ? "Add New" : "Edit" }} Habit </mat-card-title>
     <hr />
     <form [formGroup]="habitForm" (ngSubmit)="onSubmit()">
       <mat-card-content>
@@ -72,7 +79,9 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="accent" type="submit">Save</button>
-        <button mat-raised-button color="warn" (click)="exitForm()">Cancel</button>
+        <button mat-raised-button (click)="exitForm()">
+          Cancel
+        </button>
       </mat-card-actions>
     </form>
   </mat-card>
