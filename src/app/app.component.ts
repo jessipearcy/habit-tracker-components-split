@@ -8,12 +8,12 @@ import { Habit } from './models/habit';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  public habits: Habit[] = [
+  habits: Habit[] = [
     {
       name: '15 Minute Walk',
       frequency: 'Daily',
       description:
-        'This habit makes my kitchen look nice and makes my day better the next morning.',
+        'Getting outside and enjoying the fresh air helps me clear my head and improves my mood.',
     },
     {
       name: 'Weed the Garden',
