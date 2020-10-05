@@ -1,6 +1,7 @@
-# HabitTracker
+# HabitTracker Split Files
 
-Visit https://stackblitz.com/edit/habit-tracker-basic?file=src/app/app.component.html to see the demo!
+These are resource files for readers who are about halfway through a coding tutorial to use in case they've gotten a little lost!
+
 
 ## Development server
 
