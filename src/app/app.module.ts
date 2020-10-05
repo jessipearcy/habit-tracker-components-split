@@ -12,9 +12,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { HabitFormComponent } from './habit-form/habit-form.component';
+import { AllHabitsComponent } from './all-habits/all-habits.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ToolbarComponent, HabitFormComponent, AllHabitsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
