@@ -1,6 +1,6 @@
-<div class="add-form-container" *ngIf="adding || editing">
+<div class="add-form-container">
     <mat-card>
-      <mat-card-title> {{ adding ? "Add New" : "Edit" }} Habit </mat-card-title>
+      <mat-card-title> Add Habit </mat-card-title>
       <hr />
       <form [formGroup]="habitForm" (ngSubmit)="onSubmit()">
         <mat-card-content>
