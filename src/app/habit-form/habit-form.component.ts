@@ -15,8 +15,6 @@ export class HabitFormComponent implements OnInit {
     description: new FormControl(''),
   });
 
-  public adding = false;
-  public editing = false;
   editingIndex: number;
 
   public habits: Habit[];
@@ -30,11 +28,7 @@ export class HabitFormComponent implements OnInit {
   public onSubmit() {
     const habit = this.habitForm.value as Habit;
 
-    if (this.editing) {
-      this.habits.splice(this.editingIndex, 1, habit);
-    } else {
-      this.habits.push(this.habitForm.value as Habit);
-    }
+    this.habits.push(this.habitForm.value as Habit);
     this.exitForm();
   }
 
@@ -44,13 +38,10 @@ export class HabitFormComponent implements OnInit {
       frequency: habit.frequency,
       description: habit.description,
     });
-    this.editing = true;
     this.editingIndex = index;
   }
 
   exitForm() {
-    this.adding = false;
-    this.editing = false;
     this.habitForm.reset();
   }
 }
