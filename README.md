@@ -1,6 +1,5 @@
 # HabitTracker Split Files
-
-These are resource files for readers who are about halfway through a coding tutorial to use in case they've gotten a little lost!
+Starter code for [Inputs and Outputs: Working With Angular Components](https://medium.com/better-programming/inputs-and-outputs-working-with-angular-components-f3204e6599f)
 
 
 ## Development server
